@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 
@@ -141,4 +142,149 @@ Browse official government schemes under the selected category.
 
 
 </body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Government Schemes</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+
+<h2 class="logo">Civic-Scheme</h2>
+
+<div class="nav-right">
+
+<input 
+type="text"
+id="searchInput"
+placeholder="Search schemes..."
+oninput="showSuggestions()" 
+onkeypress="handleSearch(event)"
+>
+<div id="suggestionsBox" class="suggestions-box"></div>
+
+<button onclick="startVoiceSearch()">🎤</button>
+<button onclick="toggleLanguage()">🌐</button>
+<button onclick="toggleDarkMode()">🌙</button>
+
+</div>
+
+</nav>
+<h3 id="welcomeMsg" style="text-align:center;"></h3>
+
+<div class="filter-chips">
+
+<button onclick="filterCategory(event, 'all')">All</button>
+<button onclick="filterCategory(event, 'education')">Education</button>
+<button onclick="filterCategory(event, 'health')">Health</button>
+<button onclick="filterCategory(event, 'agriculture')">Agriculture</button>
+<button onclick="filterCategory(event, 'women')">Women</button>
+<button onclick="filterCategory(event, 'skills')">Skills</button>
+<button onclick="filterCategory(event, 'business')">Business</button>
+<button onclick="filterCategory(event, 'housing')">Housing</button>
+
+</div>
+
+<!-- SCHEMES SECTION -->
+
+<h1 class="page-title">Available Government Schemes</h1>
+
+<p style="text-align:center; margin-top:10px;">
+Browse official government schemes under the selected category.
+</p>
+
+<div class="cards-container" id="schemeContainer">
+<!-- Schemes will load dynamically from schemes-data.js -->
+</div>
+
+
+<!-- DIGITAL PORTALS SECTION -->
+
+<h1 class="page-title">Government Digital Platforms</h1>
+
+<div class="cards-container">
+
+<div class="card">
+<h3>Digital India</h3>
+<p>Flagship initiative to transform India into a digitally empowered society.</p>
+<a href="https://www.digitalindia.gov.in/" target="_blank">
+<button>Visit Portal</button>
+</a>
+</div>
+
+<div class="card">
+<h3>DigiLocker</h3>
+<p>Secure digital platform for storing and sharing government-issued documents.</p>
+<a href="https://www.digilocker.gov.in/" target="_blank">
+<button>Visit Portal</button>
+</a>
+</div>
+
+<div class="card">
+<h3>UMANG</h3>
+<p>Unified platform to access multiple government services in one place.</p>
+<a href="https://web.umang.gov.in/" target="_blank">
+<button>Visit Portal</button>
+</a>
+</div>
+
+<div class="card">
+<h3>National Portal of India</h3>
+<p>Single window for accessing government information and citizen services.</p>
+<a href="https://www.india.gov.in/" target="_blank">
+<button>Visit Portal</button>
+</a>
+</div>
+
+<div class="card">
+<h3>MyGov</h3>
+<p>Citizen engagement platform for discussions, participation and feedback.</p>
+<a href="https://www.mygov.in/" target="_blank">
+<button>Visit Portal</button>
+</a>
+</div>
+
+<div class="card">
+<h3>Data.gov.in</h3>
+<p>Open Government Data platform providing datasets from government departments.</p>
+<a href="https://data.gov.in/" target="_blank">
+<button>Visit Portal</button>
+</a>
+</div>
+
+<div class="card">
+<h3>iGOD</h3>
+<p>Integrated Government Online Directory with verified government contacts.</p>
+<a href="https://igod.gov.in/" target="_blank">
+<button>Visit Portal</button>
+</a>
+</div>
+
+</div>
+
+
+<!-- BACK BUTTON -->
+
+<div style="margin-top:40px;">
+<a href="domains.html">
+<button class="start-btn">⬅ Back to Domains</button>
+</a>
+</div>
+
+
+<!-- <script src="schemes-data.js"></script> -->
+<script src="script.js"></script>
+
+
+</body>
+>>>>>>> 99b64ae03b9ba9d80f205d940cd60174845f520c
 </html>
