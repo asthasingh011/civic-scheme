@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Select Scheme Domain</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <h2 class="logo">Civic-Scheme</h2>
+
+  <div class="nav-right">
+    <input 
+      type="text"
+      id="searchInput"
+      placeholder="Search schemes..."
+      onkeypress="handleSearch(event)"
+    >
+
+    <a href="register.html" class="nav-link">Register</a>
+    <a href="feedback.html" class="nav-link">Feedback</a>
+
+    <button onclick="startVoiceSearch()">🎤</button>
+    <button onclick="toggleLanguage()">🌐</button>
+    <button onclick="toggleDarkMode()">🌙</button>
+  </div>
+</nav>
+
+<!-- TITLE -->
+<h1 class="page-title">Choose Scheme Category</h1>
+
+<!-- DOMAIN CARDS -->
+<div class="cards-container">
+
+  <div class="card" onclick="openDomain('education')">
+    <h3>Education & Learning</h3>
+    <p>Scholarships and education programs</p>
+    <span class="count" id="count-education">0</span>
+  </div>
+
+  <div class="card" onclick="openDomain('health')">
+    <h3>Health & Wellness</h3>
+    <p>Healthcare and wellness schemes</p>
+    <span class="count" id="count-health">0</span>
+  </div>
+
+  <div class="card" onclick="openDomain('agriculture')">
+    <h3>Agriculture & Rural</h3>
+    <p>Farmer and rural development schemes</p>
+    <span class="count" id="count-agriculture">0</span>
+  </div>
+
+  <div class="card" onclick="openDomain('women')">
+    <h3>Women & Child</h3>
+    <p>Women empowerment and child welfare</p>
+    <span class="count" id="count-women">0</span>
+  </div>
+
+  <div class="card" onclick="openDomain('skills')">
+    <h3>Skills & Employment</h3>
+    <p>Skill development and job programs</p>
+    <span class="count" id="count-skills">0</span>
+  </div>
+
+  <div class="card" onclick="openDomain('business')">
+    <h3>Business & Entrepreneurship</h3>
+    <p>Startup and business support schemes</p>
+    <span class="count" id="count-business">0</span>
+  </div>
+
+  <div class="card" onclick="openDomain('housing')">
+    <h3>Housing & Shelter</h3>
+    <p>Affordable housing programs</p>
+    <span class="count" id="count-housing">0</span>
+  </div>
+
+  <div class="card" onclick="openDomain('banking')">
+    <h3>Banking & Finance</h3>
+    <p>Financial inclusion schemes</p>
+    <span class="count" id="count-banking">0</span>
+  </div>
+
+  <div class="card" onclick="openDomain('social')">
+    <h3>Social Welfare</h3>
+    <p>Support for disadvantaged groups</p>
+    <span class="count" id="count-social">0</span>
+  </div>
+
+  <div class="card" onclick="openDomain('transport')">
+    <h3>Transport & Infrastructure</h3>
+    <p>Transport development schemes</p>
+    <span class="count" id="count-transport">0</span>
+  </div>
+
+  <div class="card" onclick="openDomain('technology')">
+    <h3>Science & IT</h3>
+    <p>Technology and digital programs</p>
+    <span class="count" id="count-technology">0</span>
+  </div>
+
+  <div class="card" onclick="openDomain('sports')">
+    <h3>Sports & Culture</h3>
+    <p>Sports and cultural initiatives</p>
+    <span class="count" id="count-sports">0</span>
+  </div>
+
+  <div class="card" onclick="openDomain('tourism')">
+    <h3>Travel & Tourism</h3>
+    <p>Tourism promotion schemes</p>
+    <span class="count" id="count-tourism">0</span>
+  </div>
+
+  <div class="card" onclick="openDomain('sanitation')">
+    <h3>Utility & Sanitation</h3>
+    <p>Water and sanitation programs</p>
+    <span class="count" id="count-sanitation">0</span>
+  </div>
+
+  <div class="card" onclick="openDomain('law')">
+    <h3>Public Safety & Justice</h3>
+    <p>Legal and safety related schemes</p>
+    <span class="count" id="count-law">0</span>
+  </div>
+
+</div>
+
+<!-- BACK BUTTON -->
+<div style="margin-top:40px; text-align:center;">
+  <a href="index.html">
+    <button class="start-btn">⬅ Back to Home</button>
+  </a>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
