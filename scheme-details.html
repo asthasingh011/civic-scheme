@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scheme Details</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+<h2 class="logo">Civic-Scheme</h2>
+
+<div class="nav-right">
+
+  <div style="position:relative;">
+
+    <input 
+      type="text"
+      id="searchInput"
+      placeholder="Search schemes..."
+      oninput="showSuggestions()"
+      onkeypress="handleSearch(event)"
+    >
+
+    <div id="suggestionsBox" class="suggestions-box"></div>
+
+  </div>
+
+  <a href="register.html" class="nav-link">Register</a>
+  <a href="feedback.html" class="nav-link">Feedback</a>
+
+  <button onclick="toggleLanguage()">🌐</button>
+  <button onclick="toggleDarkMode()">🌙</button>
+
+</div>
+</nav>
+
+
+<!-- PAGE TITLE -->
+<h3 id="welcomeMsg" style="text-align:center;"></h3>
+
+<h1 class="page-title">Scheme Details</h1>
+
+
+<!-- MAIN CARD -->
+
+<div class="details-container">
+
+<div class="details-card">
+
+<h2 id="schemeName"></h2>
+
+<p id="description" class="description"></p>
+
+<hr>
+
+<h3>Eligibility</h3>
+<p id="eligibility"></p>
+
+<h3>Benefits</h3>
+<p id="benefits"></p>
+
+<h3>Documents Required</h3>
+<ul id="documents"></ul>
+
+<div class="btn-group">
+
+<a id="applyLink" target="_blank">
+<button class="apply-btn">Apply Now</button>
+</a>
+
+<a href="schemes.html">
+<button class="back-btn">⬅ Back</button>
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- <script src="schemes-data.js"></script> -->
+<script src="script.js"></script>
+
+</body>
+</html>
