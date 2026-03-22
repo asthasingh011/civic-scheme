@@ -3,18 +3,20 @@ const mysql = require("mysql");
 const cors = require("cors");
 
 const app = express();
+
+// Middleware
 app.use(cors());
 app.use(express.json());
 
-// 🔐 DATABASE CONNECTION (using ENV variables)
+// 🔗 LOCAL DATABASE CONNECTION
 const db = mysql.createConnection({
-  host: process.env.DB_HOST,
-  user: process.env.DB_USER,
-  password: process.env.DB_PASSWORD,
-  database: process.env.DB_NAME
+  host: "localhost",
+  user: "root",
+  password: "CaptureCare11", // 🔥 change if your password is different
+  database: "schemes_db"
 });
 
-// ✅ CONNECT DB
+// ✅ CONNECT TO DB
 db.connect(err => {
   if (err) {
     console.log("❌ DB connection failed:", err);
@@ -23,11 +25,11 @@ db.connect(err => {
   }
 });
 
-// 📡 APIs
+// 📡 GET ALL SCHEMES
 app.get("/schemes", (req, res) => {
   db.query("SELECT * FROM schemes", (err, result) => {
     if (err) {
-      console.log(err);
+      console.log("❌ Error fetching schemes:", err);
       res.status(500).send(err);
     } else {
       res.json(result);
@@ -35,12 +37,13 @@ app.get("/schemes", (req, res) => {
   });
 });
 
+// 📊 DOMAIN COUNT API
 app.get("/domain-count", (req, res) => {
   db.query(
     "SELECT domain, COUNT(*) AS total FROM schemes GROUP BY domain",
     (err, result) => {
       if (err) {
-        console.log(err);
+        console.log("❌ Error fetching domain count:", err);
         res.status(500).send(err);
       } else {
         res.json(result);
@@ -49,9 +52,14 @@ app.get("/domain-count", (req, res) => {
   );
 });
 
-// 🌐 PORT FIX (VERY IMPORTANT FOR RENDER)
-const PORT = process.env.PORT || 3000;
+// 🌐 DEFAULT ROUTE (optional)
+app.get("/", (req, res) => {
+  res.send("Server is running 🚀");
+});
+
+// 🚀 START SERVER
+const PORT = 3000;
 
 app.listen(PORT, () => {
-  console.log(`🚀 Server running on port ${PORT}`);
+  console.log(`🚀 Server running at http://localhost:${PORT}`);
 });
